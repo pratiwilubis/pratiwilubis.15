@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Grammar Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="fireBackground"></div>
+<header>🎯 Grammar Quiz</header>
+
+<div class="quiz-box">
+  <div id="levelSelect" class="section center">
+    <h3>Select Difficulty Level</h3>
+    <button class="button" onclick="startQuiz('Easy')">Easy</button>
+    <button class="button" onclick="startQuiz('Medium')">Medium</button>
+    <button class="button" onclick="startQuiz('Hard')">Hard</button>
+  </div>
+
+  <div id="quizContainer" style="display:none; position: relative;">
+    <div id="streakDisplay" class="streak-display"></div>
+    <div id="levelIndicator">Level: </div>
+    <div id="quizBox"></div>
+    <div class="progress-bar-container">
+      <div id="progressBar"></div>
+    </div>
+    <button onclick="nextQuestion()" class="button">Next Question 🔄</button>
+    <a href="index.html" class="button">Back to Home 🏠</a>
+  </div>
+</div>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>
