@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Advanced English Grammar App</title>
-<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Advanced Grammar Checker</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>📚 Advanced English Grammar App</header>
+<header>Advanced Grammar Checker</header>
 
-<div class="container">
-  <!-- Grammar Checker Section -->
-  <div class="section">
-    <h2 class="center">📝 Grammar Checker</h2>
-    <textarea id="sentenceInput" placeholder="Type your sentence here..."></textarea>
-    <button class="button" onclick="checkGrammar()">Check Grammar ✅</button>
-    <div id="resultContainer" class="result-container"></div>
-  </div>
-
-  <!-- Link to Quiz -->
-  <div class="section center">
-    <h2>🎯 Grammar Quiz</h2>
-    <p>Test your grammar knowledge with fun quizzes!</p>
-    <a href="quiz.html" class="button">Go to Quiz</a>
-  </div>
+<div class="container section large">
+  <h2>Check Your Grammar</h2>
+  <textarea id="sentenceInput" placeholder="Type a sentence..."></textarea>
+  <button class="button" onclick="checkGrammar()">Check Grammar</button>
+  <div id="resultContainer"></div>
 </div>
 
-<script src="js/grammar.js"></script>
+<div class="container center">
+  <a class="button" href="quiz.html">Go to Grammar Quiz</a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

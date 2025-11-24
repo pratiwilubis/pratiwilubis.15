@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
 <title>Grammar Quiz</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="fireBackground"></div>
-<header>🎯 Grammar Quiz</header>
+<header>Grammar Quiz</header>
 
-<div class="quiz-box">
-  <div id="levelSelect" class="section center">
-    <h3>Select Difficulty Level</h3>
-    <button class="button" onclick="startQuiz('Easy')">Easy</button>
-    <button class="button" onclick="startQuiz('Medium')">Medium</button>
-    <button class="button" onclick="startQuiz('Hard')">Hard</button>
-  </div>
-
-  <div id="quizContainer" style="display:none; position: relative;">
-    <div id="streakDisplay" class="streak-display"></div>
-    <div id="levelIndicator">Level: </div>
-    <div id="quizBox"></div>
-    <div class="progress-bar-container">
-      <div id="progressBar"></div>
-    </div>
-    <button onclick="nextQuestion()" class="button">Next Question 🔄</button>
-    <a href="index.html" class="button">Back to Home 🏠</a>
-  </div>
+<div id="startScreen" class="container card">
+  <h2>Pilih Tingkat Kesulitan</h2>
+  <button class="button" onclick="startQuiz('easy')">Easy (20 soal)</button>
+  <button class="button" onclick="startQuiz('medium')">Medium (15 soal)</button>
+  <button class="button" onclick="startQuiz('hard')">Hard (10 soal)</button>
 </div>
 
-<script src="js/quiz.js"></script>
+<div id="quizScreen" class="container card" style="display:none;">
+  <div id="questionText" class="question-text"></div>
+  <div id="optionsBox"></div>
+</div>
+
+<div id="finalScreen" class="container card" style="display:none;">
+  <h2>Quiz Selesai!</h2>
+  <p id="finalScore"></p>
+  <button class="button" onclick="location.reload()">Ulangi</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
