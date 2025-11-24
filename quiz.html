@@ -9,13 +9,17 @@
 <header>Grammar Quiz</header>
 
 <div id="startScreen" class="container card">
-  <h2>Pilih Tingkat Kesulitan</h2>
-  <button class="button" onclick="startQuiz('easy')">Easy (20 soal)</button>
-  <button class="button" onclick="startQuiz('medium')">Medium (15 soal)</button>
-  <button class="button" onclick="startQuiz('hard')">Hard (10 soal)</button>
+  <h2>Select your difficulty level</h2>
+  <button class="button" onclick="startQuiz('easy')">Easy (20 question)</button>
+  <button class="button" onclick="startQuiz('medium')">Medium (15 question)</button>
+  <button class="button" onclick="startQuiz('hard')">Hard (10 question)</button>
 </div>
 
 <div id="quizScreen" class="container card" style="display:none;">
+  <div class="progress">
+    <div id="progressBar" class="progress-bar"></div>
+    <div id="progressText" class="progress-text">0/0</div>
+  </div>
   <div id="questionText" class="question-text"></div>
   <div id="optionsBox"></div>
 </div>
@@ -23,7 +27,8 @@
 <div id="finalScreen" class="container card" style="display:none;">
   <h2>Quiz Selesai!</h2>
   <p id="finalScore"></p>
-  <button class="button" onclick="location.reload()">Ulangi</button>
+  <button class="button" onclick="location.reload()">Repeat</button>
+  <a class="button" href="index.html">Back to Checker</a>
 </div>
 
 <script src="script.js"></script>
