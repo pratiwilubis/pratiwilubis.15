@@ -1,3 +1,6 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 body {
   font-family: Poppins, sans-serif;
   background: #e8eeff;
@@ -8,8 +11,8 @@ header {
   background: linear-gradient(90deg, #355cfa, #6e9eff);
   padding:25px;
   color:white;
-  font-size:30px;
-  font-weight:bold;
+  font-size:28px;
+  font-weight:700;
   text-align:center;
 }
 .container {
@@ -21,17 +24,18 @@ header {
   padding:30px;
   margin:30px auto;
   border-radius:15px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 .large textarea{
-  height:180px;
+  height:200px;
 }
 textarea {
   width:100%;
   padding:15px;
   border-radius:12px;
-  border:1px solid #bbb;
+  border:1px solid #d0d7ff;
   font-size:16px;
+  resize:vertical;
 }
 .button {
   background:#355cfa;
@@ -43,21 +47,60 @@ textarea {
   cursor:pointer;
   border:none;
   font-size:16px;
+  text-decoration:none;
+  text-align:center;
 }
-.quiz-box {
-  max-width:750px;
+.center { text-align:center; }
+
+/* Quiz cards */
+.card {
   background:white;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  margin:40px auto;
 }
-.quiz-option {
-  background:#eef3ff;
-  padding:15px;
-  margin:12px 0;
-  cursor:pointer;
+.question-text {
+  font-size:20px;
+  font-weight:600;
+  margin:14px 0 8px;
+}
+.option {
+  background:#f2f5ff;
+  padding:14px;
+  margin:10px 0;
   border-radius:12px;
+  cursor:pointer;
   font-size:18px;
+  transition:transform .08s ease, box-shadow .08s ease;
 }
-.correct { background:#c9ffd0 !important; }
-.wrong { background:#ffd1d1 !important; }
+.option:active { transform:scale(.995); }
+.correct { background:#caffd3 !important; }
+.wrong { background:#ffd3d3 !important; }
+
+/* Progress */
+.progress {
+  position:relative;
+  height:14px;
+  background:#f0f4ff;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:14px;
+}
+.progress-bar {
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#4b7bec,#74b9ff);
+  transition:width .28s ease;
+}
+.progress-text {
+  position:absolute;
+  right:10px;
+  top:-26px;
+  font-size:13px;
+  color:#334;
+}
+
+/* result */
+#error, .error-card { background:#fff3f3; color:#8a1f1f; padding:10px; border-radius:8px; margin-top:10px; }
+.section.success { background:#f3fff6; color:#0a7a3a; padding:12px; border-radius:10px; }
